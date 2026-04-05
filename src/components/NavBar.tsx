@@ -52,17 +52,34 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <div className="lg:hidden flex items-center gap-4">
             <button 
-              onClick={() => setIsOpen(!isOpen)} 
+              onClick={() => {
+                console.log("OLD STATE:"+ isOpen);
+                setIsOpen(!isOpen);
+              }
+              } 
               className="text-blue-900 focus:outline-none"
               aria-expanded={isOpen}
               aria-label="Toggle navigation menu"
             >
               {isOpen ? <X size={32} /> : <Menu size={32} />}
             </button>
+            {isOpen && (<div>test</div>)}
           </div>
         </div>
       </nav>
 
+<div className="lg:hidden bg-white border-t border-gray-100 absolute w-full left-0 p-6 space-y-4 shadow-xl">
+          {navLinks.map((link) => (
+            <Link 
+              key={link.name} 
+              href={link.href} 
+              onClick={() => setIsOpen(false)}
+              className="block text-xl font-semibold text-gray-800 border-b pb-2"
+            >
+              {link.name}
+            </Link>
+          ))}
+        </div>
       {/* Mobile Sidebar */}
       {isOpen && (
         <div className="lg:hidden bg-white border-t border-gray-100 absolute w-full left-0 p-6 space-y-4 shadow-xl">
