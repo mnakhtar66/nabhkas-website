@@ -63,11 +63,9 @@ const Navbar = () => {
             >
               {isOpen ? <X size={32} /> : <Menu size={32} />}
             </button>
-            {isOpen && (<div>test</div>)}
           </div>
         </div>
       </nav>
-
 
       {/* Mobile Sidebar */}
       {isOpen && (

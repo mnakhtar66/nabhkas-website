@@ -7,7 +7,7 @@ const Hero = () => {
       {/* Background Image - SEO Optimized Alt and Priority */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/home_page.png"
+          src="./images/home_page.png"
           alt="Professional NABHKAS technician providing home electrical and appliance repair services"
           fill
           className="object-cover object-center"
