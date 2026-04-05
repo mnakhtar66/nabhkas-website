@@ -68,18 +68,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-<div className="lg:hidden bg-white border-t border-gray-100 absolute w-full left-0 p-6 space-y-4 shadow-xl">
-          {navLinks.map((link) => (
-            <Link 
-              key={link.name} 
-              href={link.href} 
-              onClick={() => setIsOpen(false)}
-              className="block text-xl font-semibold text-gray-800 border-b pb-2"
-            >
-              {link.name}
-            </Link>
-          ))}
-        </div>
+
       {/* Mobile Sidebar */}
       {isOpen && (
         <div className="lg:hidden bg-white border-t border-gray-100 absolute w-full left-0 p-6 space-y-4 shadow-xl">
